@@ -38,12 +38,12 @@ export default class extends Command {
             .setFooter("Made with ❤️ by @wai")
         const array =[...chunks(emojis, 50)]
         const chunkchunks = [...chunks(array, 10)]
-        chunkchunks.forEach((chunk, index) => {
+        chunkchunks.forEach((chunk, cindex) => {
             let str = ""
             chunk.forEach((chunk, index) => {
-                str += `**${index + 1}** - [Click Here](https://packs.guilded.best/api/inport/${serverID}/${message.createdBy}/${index + 1})\n`
+                str += `**${index + 1}** - [Click Here](https://packs.guilded.best/api/inport/${serverID}/${message.createdBy}/${index + (cindex * 50)})\n`
             })
-            embed.addField(`Page ${index + 1}`, str, true)
+            embed.addField(`Page ${cindex + 1}`, str, true)
         })
         return message.reply({
             isPrivate: true,
