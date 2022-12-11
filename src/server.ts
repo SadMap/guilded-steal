@@ -30,4 +30,4 @@ app.get('/api:serverID/:userID/:page', async (req, res) => {
         })
     return;
     })
-app.listen(3000, () => console.log('Server is up and running!'));
+app.listen(25841, () => console.log('Server is up and running!'));
