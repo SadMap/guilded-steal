@@ -41,7 +41,7 @@ export default class extends Command {
         chunkchunks.forEach((chunk, index) => {
             let str = ""
             chunk.forEach((chunk, index) => {
-                str += `**${index + 1}** - [Click Here](https://packs.guilded.best/inport/${serverID}/${message.createdBy}/${index + 1}\n`
+                str += `**${index + 1}** - [Click Here](https://packs.guilded.best/api/inport/${serverID}/${message.createdBy}/${index + 1})\n`
             })
             embed.addField(`Page ${index + 1}`, str, true)
         })

@@ -4,7 +4,7 @@ import { checkVoted, chunks, getEmojis, isServerExists } from './utils';
 
 const app = express();
 
-app.get('/api:serverID/:userID/:page', async (req, res) => {
+app.get('/api/inport/:serverID/:userID/:page', async (req, res) => {
     const { serverID, userID, page } = req.params;
     if (!serverID) return res.status(400).json({ error: 'Server ID is required!' });
     if (!userID) return res.status(400).json({ error: 'User ID is required!' });
